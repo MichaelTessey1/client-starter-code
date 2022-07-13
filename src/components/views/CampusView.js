@@ -14,8 +14,10 @@ const CampusView = (props) => {
   return (
     <div>
       <h1>{campus.name}</h1>
+      <img height="25%" width="25%" src={campus.imageURL} alt="campus" />
       <p>{campus.address}</p>
       <p>{campus.description}</p>
+      { campus.students.length > 0 ? <p>Students from {campus.name}</p> : <p>There are no students currently enrolled in {campus.name}</p> }
       {campus.students.map( student => {
         let name = student.firstname + " " + student.lastname;
         return (
@@ -26,6 +28,7 @@ const CampusView = (props) => {
           </div>
         );
       })}
+      <Link to={'/campuses'}>Back to Campuses</Link>
     </div>
   );
 };
