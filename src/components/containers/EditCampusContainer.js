@@ -43,7 +43,7 @@ class EditCampusContainer extends Component {
             campus.imageURL = "https://w7.pngwing.com/pngs/244/287/png-transparent-google-map-maker-pin-computer-icons-google-maps-map-icon-angle-black-map.png"
           }
 
-          let newCampus = await this.props.editCampus(campus);
+        //   let newCampus = await this.props.editCampus(campus);
 
           this.setState({
             name: "", 
